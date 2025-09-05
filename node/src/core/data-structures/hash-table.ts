@@ -30,6 +30,6 @@ const checkVoter2 = (name: string) => {
   }
 };
 
-checkVoter2('rick');
-checkVoter2('rick');
-checkVoter2('morty');
+checkVoter2('user1');
+checkVoter2('user1');
+checkVoter2('user2');
