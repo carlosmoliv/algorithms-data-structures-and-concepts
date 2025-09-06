@@ -72,25 +72,6 @@ class LinkedList<T> {
     }
   }
 
-  isEmpty(): boolean {
-    return this.head === null;
-  }
-
-  clear(): void {
-    this.head = null;
-    this.tail = null;
-  }
-
-  getSize(): number {
-    let count = 0;
-    let current = this.head;
-    while (current) {
-      count++;
-      current = current.next;
-    }
-    return count;
-  }
-
   print(): void {
     const values = [];
     let current = this.head;
