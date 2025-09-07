@@ -1,4 +1,4 @@
-function printUnorderedPairs(arrayA: number[], arrayB: number[]): void {
+function printUnorderedPairs3(arrayA: number[], arrayB: number[]): void {
   for (let i = 0; i < arrayA.length; i++) {
     for (let j = 0; j < arrayB.length; j++) {
       for (let k = 0; k < 1000000; k++) {
