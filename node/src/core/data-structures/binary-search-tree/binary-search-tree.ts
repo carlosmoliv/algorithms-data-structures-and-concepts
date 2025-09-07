@@ -1,19 +1,10 @@
-// Node for BST
-class BSTNode<T> {
-  value: T;
-  left: BSTNode<T> | null = null;
-  right: BSTNode<T> | null = null;
+import { BTNode } from './binary-tree-node';
 
-  constructor(value: T) {
-    this.value = value;
-  }
-}
-
-class BinarySearchTree<T> {
-  root: BSTNode<T> | null = null;
+export class BST<T> {
+  root: BTNode<T> | null = null;
 
   insert(value: T): void {
-    const newNode = new BSTNode(value);
+    const newNode = new BTNode(value);
 
     if (!this.root) {
       this.root = newNode;
@@ -67,7 +58,7 @@ class BinarySearchTree<T> {
     return current.value;
   }
 
-  inorder(node: BSTNode<T> | null = this.root): T[] {
+  inorder(node: BTNode<T> | null = this.root): T[] {
     if (!node) return [];
     return [
       ...this.inorder(node.left),
@@ -76,15 +67,3 @@ class BinarySearchTree<T> {
     ];
   }
 }
-
-const bst = new BinarySearchTree<number>();
-bst.insert(10);
-bst.insert(5);
-bst.insert(15);
-bst.insert(3);
-bst.insert(7);
-
-console.log('Search:', bst.search(7));
-console.log('Min:', bst.findMin());
-console.log('Max:', bst.findMax());
-console.log('Inorder:', bst.inorder());
