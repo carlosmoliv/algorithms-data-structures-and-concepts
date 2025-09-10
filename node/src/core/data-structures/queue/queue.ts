@@ -21,12 +21,3 @@ export class Queue<T> {
     return this.items.length === 0;
   }
 }
-
-const queue = new Queue();
-queue.enqueue(7);
-queue.enqueue(4);
-queue.enqueue(5);
-
-console.log('peek', queue.peek());
-queue.dequeue();
-console.log('peek', queue.peek());
