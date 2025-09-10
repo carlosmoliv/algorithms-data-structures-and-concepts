@@ -1,5 +1,4 @@
-// Stack
-class Stack<T> {
+export class Stack<T> {
   private readonly items: T[];
 
   constructor() {
@@ -22,13 +21,3 @@ class Stack<T> {
     return this.items.length === 0;
   }
 }
-
-const stack = new Stack<number>();
-stack.push(2);
-stack.push(8);
-stack.push(12);
-
-console.log('peek', stack.peek());
-stack.pop();
-console.log('peek', stack.peek());
-console.log('isEmpty', stack.isEmpty());
