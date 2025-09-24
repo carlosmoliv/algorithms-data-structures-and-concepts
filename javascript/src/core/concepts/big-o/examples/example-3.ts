@@ -7,8 +7,14 @@ function printUnorderedPairs(arr: number[]): void {
 }
 
 // ANSWER: O(n^2)
-// The function contains a nested loop structure where the outer loop iterates through the input array,
-// and for each iteration of the outer loop, the inner loop iterates through the remaining elements of the array.
-// If the input array has n elements, the outer loop runs n times, and for each iteration of the outer loop,
-// the inner loop runs approximately n/2 times on average. This results in a total of n * (n/2) = n^2/2 iterations.
-// Therefore, the time complexity of this function is O(n^2).
+// The function contains a nested loop where the outer loop iterates through the input array.
+// For each iteration of the outer loop, the inner loop starts at the next index (i + 1)
+// and iterates through the remaining elements.
+//
+// Across all iterations, the total number of inner loop executions is:
+// (n-1) + (n-2) + ... + 1 + 0 = n(n-1)/2 ≈ n²/2.
+// This is the same as saying that, on average across all outer loop iterations,
+// the inner loop runs about n/2 times, not that it always runs n/2 times for each i.
+//
+// Multiplying by the n outer iterations gives roughly n * (n/2) = n²/2,
+// and Big-O notation ignores constants, so the overall time complexity is O(n²).
