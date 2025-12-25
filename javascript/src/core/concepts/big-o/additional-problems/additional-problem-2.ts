@@ -1,4 +1,4 @@
-// The following code computes a b. What is its runtime?
+// The following code computes a^b. What is its runtime?
 function power(a: number, b: number): number {
   if (b < 0) {
     return 0;
